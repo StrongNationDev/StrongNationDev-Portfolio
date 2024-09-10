@@ -17,8 +17,8 @@
             </div>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="search">
                 <input type="text" placeholder="Search">
@@ -44,9 +44,16 @@
 </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="about">
         <h2>About</h2>
-        <p>I have acquired and sharpened my skills through years of active, consistent diligence and dedication. I am trustworthy, creative, and an effective communicator. I fondly anticipate working in a challenging yet rewarding organization to attain its visions for personal growth.</p>
+        <p>
+            I am Strong Nation! a digital nomad
+            I have acquired and sharpened my skills through years of active, consistent diligence and dedication. I bring a wealth of expertise in web and app development as well as creating Instagram bots, to help brands grow. 
+            <br></br>
+            Whether you're a small startup or a large company, I'm committed to enhancing your digital footprint and achieving your business goals. I am trustworthy, creative, and an effective communicator. I fondly anticipate working in a challenging yet rewarding organization to attain its visions for personal growth.
+            <br></br>
+            innovative solutions to enhancing brand’s online visibility and drive growth is my mission. Let's collaborate.
+        </p>
     </section>
 
     <!-- Skills Section -->
@@ -78,18 +85,22 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
         <div class="portfolio-grid">
             <div class="portfolio-iner-grid">
             <!-- Add Portfolio Items -->
                 <div class="portfolio-item"><img src="./picture/project1.png" alt="Portfolio Item 1"></div>
-                <div class="portfolio-item"><img src="./picture/project2.png" alt="Portfolio Item 1"></div>
-                <div class="portfolio-item"><img src="./picture/project3.png" alt="Portfolio Item 1"></div>
-                <div class="portfolio-item"><img src="./picture/project4.png" alt="Portfolio Item 1"></div>
+                <div class="portfolio-item"><img src="./picture/project2.png" alt="Portfolio Item 3"></div>
+                <div class="portfolio-item"><video src="./picture/Menu Button.mp4" controls loop></video></div>
             </div>
             <div class="portfolio-iner-grid">
-                <div class="portfolio-item"><img src="./picture/project5.png" alt="Portfolio Item 1"></div>
+                    <div class="portfolio-item"><img src="./picture/project3.png" alt="Portfolio Item 1"></div>
+                    <div class="portfolio-item"><img src="./picture/project4.png" alt="Portfolio Item 1"></div>
+                    <div class="portfolio-item"><video src="./picture/Attachment Menu.mp4" controls loop></video></div>
+            </div>
+            <div class="portfolio-iner-grid">
+                <div class="portfolio-item"><video src="./picture/Select Chats For Bots.mp4" controls loop></video></div>
                 <div class="portfolio-item"><img src="./picture/project6.png" alt="Portfolio Item 1"></div>
                 <div class="portfolio-item"><img src="./picture/project7.png" alt="Portfolio Item 1"></div>
             <!-- More portfolio items -->
@@ -368,7 +379,7 @@
 
 
 <!-- Contact Section -->
-<section class="contact">
+<section class="contact" id="contact">
     <div class="contact-header">
         <hr class="line">
         <h2>Contact Me</h2>
@@ -399,17 +410,17 @@
         <a href="https://calendly.com/enochprecious/30min"><img src="./icon/google-calendar.png" alt="calendly"></a>
         <a href="https://LinkedIn.com/StrongNation-Dev"><img src="./icon/social1.png" alt="LinkedIn"></a>
         <a href="https://wa.link/cagb3n"><img src="./icon/whatsapp.png" alt="WhatsApp"></a>
-        <a href="https://https://x.com/StrongNationDev?s=09"><img src="./icon/social1.png" alt="X"></a>
+        <a href="https://https://x.com/StrongNationDev?s=09"><img src="./icon/x.jpg" alt="X"></a>
     </div>
 </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const texts = ["Full Stack Website Developer", "UI & UX Designer", "Software Engineer", "Tech Enthusiast"]; // Add more texts as needed
+            const texts = ["Full Stack Website Developer", "UI & UX Designer", "Software Engineer", "Tech Enthusiast", "Telegram Bot Developer", "Mobile App Developer"]; // Add more texts as needed
             const typingTextElement = document.querySelector('.typing-text');
             let index = 0;  // Keeps track of the current text
             let charIndex = 0;  // Keeps track of the current character
             let isDeleting = false;  // Indicates whether the text is being deleted
-            let typingSpeed = 100;  // Typing speed in milliseconds
+            let typingSpeed = 80;  // Typing speed in milliseconds
             let deletingSpeed = 50;  // Deleting speed in milliseconds
             let delayAfterComplete = 2000;  // Delay after completing typing before deleting
 
@@ -417,15 +428,13 @@
                 const currentText = texts[index];
 
                 if (isDeleting) {
-                    // If deleting, remove a character
                     typingTextElement.textContent = currentText.substring(0, charIndex--);
                     if (charIndex < 0) {
-                        // If deletion is complete, move to the next text
                         isDeleting = false;
-                        index = (index + 1) % texts.length;  // Cycle through texts
-                        setTimeout(typeText, 500);  // Short delay before typing the next text
+                        index = (index + 1) % texts.length; 
+                        setTimeout(typeText, 500);
                     } else {
-                        setTimeout(typeText, deletingSpeed);  // Continue deleting
+                        setTimeout(typeText, deletingSpeed);  
                     }
                 } else {
                     // If typing, add a character
