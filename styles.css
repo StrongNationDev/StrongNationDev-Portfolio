@@ -257,27 +257,6 @@ nav ul li a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .portfolio-section {
     padding: 20px;
     text-align: center;
@@ -947,7 +926,7 @@ h2 {
 
 /* Contact Section */
 .contact {
-    width: 100%;
+    width: 90%;
     padding: 60px 5%;
     background-color: #1F083B;
     text-align: center;
