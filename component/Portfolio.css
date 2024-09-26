@@ -29,9 +29,96 @@ p {
     text-align: center;
 }
 
+
+
+
+/* Header Section */
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #280952;
+    padding: 15px 30px;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 60px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    left: 50%;  
+    transform: translateX(-50%); 
+    z-index: 1000;
+    margin-bottom: 5rem;
+}
+
+/* Logo */
+header .logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Nav Section */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding-bottom: 12px;
+    margin-right: 25px;
+}
+
+nav ul li {
+    display: inline;
+    text-underline-offset: none;
+}
+
+nav ul li a {
+    color: #F3E9FB;
+    background-color: #1F083B;
+    height: 20px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Search Section */
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.search input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1F083B;
+}
+
+
+
+/* .portfolio-sectio */
+
 .portfolio-section {
     padding: 20px;
     text-align: center;
+    margin-top: 10rem;
 }
 
 .carousel-container {
