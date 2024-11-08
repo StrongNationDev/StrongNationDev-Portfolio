@@ -1,0 +1,926 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: rgb(31, 8, 59);
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    height: 70px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    display: flex;
+    border: 2px solid #00b4d8;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(40, 9, 82, 0.7); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    z-index: 1000;
+}
+
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+/* General nav styling */
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: #D4D4D4;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    opacity: 0; /* Initial opacity for animation */
+    transform: translateY(50px); /* Start position from bottom */
+    animation: slideUp 0.6s ease forwards;
+}
+
+/* Keyframe animation for sliding up */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Stagger animation delay for each link */
+nav a:nth-child(1) { animation-delay: 0.5s; }
+nav a:nth-child(2) { animation-delay: 0.7s; }
+nav a:nth-child(3) { animation-delay: 0.8s; }
+nav a:nth-child(4) { animation-delay: 0.9s; }
+
+
+nav a:hover {
+    color: #00b4d8;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 0 20px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-h1 {
+    font-size: 2.5rem;
+    color: #D4D4D4;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.brand-name {
+    font-size: 3.5rem;
+    color: #00b4d8;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    color: #A6B4B7;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background: transparent;
+    border: 2px solid #00b4d8;
+    color: #00b4d8;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #00b4d8;
+    color: white;
+}
+
+.profile-section {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.social-links {
+    position: absolute;
+    right: -20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 24px; /* Adjust this size as needed */
+    height: 24px; /* Adjust this size as needed */
+}
+
+
+.social-icon:hover {
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .social-links {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*here are the css styles for service section*/
+.offer-section {
+    height: 450px;
+    text-align: center;
+    color: #00b4d8;
+}
+
+.offer-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-bottom: -20px;
+}
+
+.offer-section p {
+    font-size: 15px;
+    margin-bottom: -50px;
+    color: #D4D4D4;
+}
+
+
+.offer-container {
+    width: 90%;
+    height: 360px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: #14092b;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+
+.offer-box {
+    background-color: #2a1052;
+    width: 220px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    border: 2px dashed #00b4d8;
+}
+
+.offer-box::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed #00b4d8;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.offer-icon img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skills span {
+    border: 1px solid #00b4d8;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #00b4d8;
+    background-color: rgba(0, 180, 216, 0.1);
+    position: relative;
+    animation: float 4s ease-in-out infinite, colorChange 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.skills span:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #00b4d8, 0 0 20px #00b4d8;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(10px) rotate(-5deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Color-changing animation */
+@keyframes colorChange {
+    0% {
+        color: #00b4d8;
+        border-color: #00b4d8;
+        background-color: rgba(0, 180, 216, 0.1);
+    }
+    50% {
+        color: #90e0ef;
+        border-color: #90e0ef;
+        background-color: rgba(144, 224, 239, 0.1);
+    }
+    100% {
+        color: #00b4d8;
+        border-color: #00b4d8;
+        background-color: rgba(0, 180, 216, 0.1);
+    }
+}
+
+
+
+
+
+
+
+
+/* Here are thr css styles for recent jobs */
+
+.recent-tasks {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #00b4d8;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.task-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.task-slider {
+    display: flex;
+    gap: 30px;
+    animation: scroll 40s linear infinite;
+    width: fit-content;
+}
+
+.task-card {
+    flex: 0 0 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-10px);
+}
+
+
+
+.task-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.task-content {
+    padding: 20px;
+}
+
+.task-content h2 {
+    color: #00b4d8;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.task-content p {
+    color: #c8c8c8;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+/* Pause animation on hover */
+.task-slider-container:hover .task-slider {
+    animation-play-state: paused;
+}
+
+/* Add gradient masks for smooth edges */
+.task-slider-container::before,
+.task-slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .task-card {
+        flex: 0 0 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .task-card {
+        flex: 0 0 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+ /* Here is the css style that handle feedbacks  */
+
+.feedback-section {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.feedback-intro {
+    background: linear-gradient(145deg, #32a0e6, #a550f2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #c6e6f6;
+    position: relative; /* Allows positioning of the animated image */
+    overflow: hidden; /* Ensures the image doesn’t go outside the container */
+}
+
+.feedback-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    position: relative; /* Ensures text is above the animated image */
+    z-index: 1;
+}
+
+.feedback-intro p {
+    font-size: 1rem;
+    position: relative; /* Ensures text is above the animated image */
+    z-index: 1;
+}
+
+.animated-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    z-index: 0;
+    animation: slide 5s ease-in-out infinite alternate; /* Animation applied to image */
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(100% - 50px); /* Moves the image to the right edge */
+    }
+}
+
+
+.feedback-container {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    animation: scrollFeedback 20s linear infinite;
+}
+
+.feedback-card {
+    flex: 0 0 calc(33.33% - 20px);
+    background-color: #2A1A4A;
+    border-radius: 15px;
+    padding: 20px;
+    color: #A0A8C0;
+    min-width: 250px;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+.feedback-card:hover {
+    background: linear-gradient(145deg, #32a0e6, #a550f2);
+}
+
+.feedback-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.feedback-card h3 {
+    font-size: 1.1rem;
+    color: #5ABAD8;
+}
+
+.feedback-card p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.stars {
+    color: #5ABAD8;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* the css styles for blogs section */
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+
+
+.blog-head{
+    background: linear-gradient(145deg, #32a0e6, #a550f2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.h11 {
+    color: #32a0e6;
+    font-size: 2.5rem;
+}
+
+.p11 {
+    color: #D4D4D4;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.slider-containers {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+
+.slide {
+    min-width: calc(33.333% - 14px);
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover {
+    transform: translateY(-5px);
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+}
+
+.category {
+    display: inline-block;
+    background: #FF7F50;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.slide-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.slide-description {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background: #47B5FF;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        min-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        min-width: 100%;
+    }
+}
+
+
+
+
+
+
+/* css codes that handled the footer peart */
+.bottom-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-section {
+    position: relative;
+    text-align: center;
+    color: #56d8f5;
+    background: linear-gradient(45deg, #4a00e0, #8e2de2, #d94dff);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1; /* Ensures text appears above the image */
+}
+
+.header-section p {
+    color: #d8d8d8;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animated image styling */
+/* Apply a slower duration and smoother easing */
+.animated-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 80px;
+    height: auto;
+    transform: translateY(-50%);
+    animation: slideLeftRight 10s ease-in-out infinite; /* Slower duration */
+    z-index: 0;
+}
+
+@keyframes slideLeftRight {
+    0% {
+        transform: translateX(-90px); /* Start slightly off the left edge */
+    }
+    50% {
+        transform: translateX(calc(100vw - 90px)); /* Move to the right edge */
+    }
+    100% {
+        transform: translateX(-90px); /* Return to the left edge */
+    }
+}
+
+
+
+
+
+
+/* Content layout */
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+}
+
+.appointment {
+    flex: 1;
+}
+
+.appointment h2 {
+    font-size: 1.5rem;
+    color: #d8d8d8;
+    margin-bottom: 1rem;
+}
+
+.appointment-button {
+    background-color: #0cf5e8;
+    color: #1c0c27;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.appointment-button:hover {
+    background-color: #07c2b8;
+}
+
+.btm-social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.9s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons img:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Animation for sliding up the icons */
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to each icon */
+.btm-social-links .social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.9s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: slideUp 1s ease forwards; 
+}
+
+.btm-social-links .social-icons:nth-child(1) img {
+    animation-delay: 0.2s;
+}
+
+.btm-social-links .social-icons:nth-child(2) img {
+    animation-delay: 0.4s;
+}
+
+.btm-social-links .social-icons:nth-child(3) img {
+    animation-delay: 0.6s;
+}
+
+.btm-social-links .social-icons:nth-child(4) img {
+    animation-delay: 0.8s;
+}
+
+.btm-social-links .social-icons:nth-child(5) img {
+    animation-delay: 1s;
+}
+
+.social-icons img:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+/* Contact form styling */
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* background-color: #1a0920; */
+    background-color: rgb(31, 8, 59);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form textarea,
+.contact-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #02E7FF;
+    /* background-color: #1c0c27; */
+    background-color: rgb(31, 8, 59);
+    color: #d8d8d8;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+.contact-form .send-button {
+    background: linear-gradient(45deg, #0cf5e8, #d94dff);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.contact-form .send-button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
